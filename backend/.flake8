@@ -1,0 +1,9 @@
+[flake8]
+extend-ignore = E203, W503, F541, E501
+per-file-ignores =
+    tests/*: F841
+    ../premium/backend/tests/*: F841
+exclude =
+    .git,
+    __pycache__,
+    src/baserow/contrib/database/formula/parser/generated

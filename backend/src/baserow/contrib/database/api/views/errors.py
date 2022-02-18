@@ -1,0 +1,73 @@
+from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND
+
+
+ERROR_VIEW_DOES_NOT_EXIST = (
+    "ERROR_VIEW_DOES_NOT_EXIST",
+    HTTP_404_NOT_FOUND,
+    "The requested view does not exist.",
+)
+ERROR_VIEW_NOT_IN_TABLE = (
+    "ERROR_VIEW_NOT_IN_TABLE",
+    HTTP_400_BAD_REQUEST,
+    "The view id {e.view_id} does not belong to the table.",
+)
+ERROR_VIEW_FILTER_DOES_NOT_EXIST = (
+    "ERROR_VIEW_FILTER_DOES_NOT_EXIST",
+    HTTP_404_NOT_FOUND,
+    "The view filter does not exist.",
+)
+ERROR_VIEW_FILTER_NOT_SUPPORTED = (
+    "ERROR_VIEW_FILTER_NOT_SUPPORTED",
+    HTTP_400_BAD_REQUEST,
+    "Filtering is not supported for the view type.",
+)
+ERROR_VIEW_FILTER_TYPE_DOES_NOT_EXIST = (
+    "ERROR_VIEW_FILTER_TYPE_DOES_NOT_EXIST",
+    HTTP_400_BAD_REQUEST,
+    "The view filter type {e.type_name} doesn't exist.",
+)
+ERROR_VIEW_FILTER_TYPE_UNSUPPORTED_FIELD = (
+    "ERROR_VIEW_FILTER_TYPE_UNSUPPORTED_FIELD",
+    HTTP_400_BAD_REQUEST,
+    "The filter {e.filter_type} is not compatible with field type {e.field_type}.",
+)
+ERROR_VIEW_SORT_DOES_NOT_EXIST = (
+    "ERROR_VIEW_SORT_DOES_NOT_EXIST",
+    HTTP_404_NOT_FOUND,
+    "The view sort does not exist.",
+)
+ERROR_VIEW_SORT_NOT_SUPPORTED = (
+    "ERROR_VIEW_SORT_NOT_SUPPORTED",
+    HTTP_400_BAD_REQUEST,
+    "Sorting is not supported for the view type.",
+)
+ERROR_VIEW_SORT_FIELD_ALREADY_EXISTS = (
+    "ERROR_VIEW_SORT_FIELD_ALREADY_EXISTS",
+    HTTP_400_BAD_REQUEST,
+    "A sort with the field already exists in the view.",
+)
+ERROR_VIEW_SORT_FIELD_NOT_SUPPORTED = (
+    "ERROR_VIEW_SORT_FIELD_NOT_SUPPORTED",
+    HTTP_400_BAD_REQUEST,
+    "The field does not support view sorting.",
+)
+ERROR_AGGREGATION_TYPE_DOES_NOT_EXIST = (
+    "ERROR_AGGREGATION_TYPE_DOES_NOT_EXIST",
+    HTTP_400_BAD_REQUEST,
+    "The specified aggregation type does not exist.",
+)
+ERROR_UNRELATED_FIELD = (
+    "ERROR_UNRELATED_FIELD",
+    HTTP_400_BAD_REQUEST,
+    "The field is not related to the provided view.",
+)
+ERROR_VIEW_DOES_NOT_SUPPORT_FIELD_OPTIONS = (
+    "ERROR_VIEW_DOES_NOT_SUPPORT_FIELD_OPTIONS",
+    HTTP_400_BAD_REQUEST,
+    "This view model does not support field options.",
+)
+ERROR_CANNOT_SHARE_VIEW_TYPE = (
+    "ERROR_CANNOT_SHARE_VIEW_TYPE",
+    HTTP_400_BAD_REQUEST,
+    "This view type does not support sharing.",
+)
